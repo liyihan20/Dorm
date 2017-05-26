@@ -1,0 +1,502 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="LogisticsDB" Class="DormDBDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=192.168.100.205;Initial Catalog=LogisticsDB;Persist Security Info=True;User ID=Logistics" SettingsObjectName="DormitoryManagement.Properties.Settings" SettingsPropertyName="LogisticsDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.dormitory_user" Member="User">
+    <Type Name="User">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="register_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="available" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="User_Authority" Member="Authority" ThisKey="id" OtherKey="user_id" Type="Authority" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_area" Member="Area">
+    <Type Name="Area">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="Area_Dorm" Member="Dorm" ThisKey="id" OtherKey="area_number" Type="Dorm" />
+      <Association Name="Area_Charge" Member="Charge" ThisKey="id" OtherKey="area_id" Type="Charge" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_unit_fee" Member="UnitFee">
+    <Type Name="UnitFee">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="price" Type="System.Decimal" DbType="Decimal(9,3)" CanBeNull="true" />
+      <Column Name="units" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="modified_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_department" Member="Department">
+    <Type Name="Department">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="property" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="hr_code" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Association Name="Department_Employee" Member="Employee" ThisKey="id" OtherKey="department" Type="Employee" />
+      <Association Name="Department_Charge" Member="Charge" ThisKey="id" OtherKey="department_id" Type="Charge" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_dorm" Member="Dorm">
+    <Type Name="Dorm">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="area_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="type_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="available" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="dorm_sex" Member="dormSex" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+      <Column Name="rent" Type="decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="manage_cost" Member="manageCost" Type="decimal" DbType="Decimal(6,2)" CanBeNull="true" />
+      <Column Name="for_order" Member="forOrder" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Dorm_FuelFee" Member="FuelFee" ThisKey="id" OtherKey="dorm_id" Type="FuelFee" />
+      <Association Name="Dorm_Lodging" Member="Lodging" ThisKey="id" OtherKey="dorm_id" Type="Lodging" />
+      <Association Name="Dorm_OtherFee" Member="OtherFee" ThisKey="id" OtherKey="dorm_id" Type="OtherFee" />
+      <Association Name="Dorm_AutoQuit" Member="AutoQuit" ThisKey="id" OtherKey="dorm_id" Type="AutoQuit" />
+      <Association Name="Area_Dorm" Member="Area" ThisKey="area_number" OtherKey="id" Type="Area" IsForeignKey="true" />
+      <Association Name="DormType_Dorm" Member="DormType" ThisKey="type_id" OtherKey="id" Type="DormType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_employee" Member="Employee">
+    <Type Name="Employee">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="card_number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="account_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="identify_number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="sex" Type="System.String" DbType="VarChar(2)" CanBeNull="true" />
+      <Column Name="degree" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="department" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="household" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="salary_type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="family_address" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="family_phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="family_connector" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="picture" Type="System.Data.Linq.Binary" DbType="Image" CanBeNull="true" UpdateCheck="Never" IsDelayLoaded="true" />
+      <Column Name="old_id" Type="System.Int32" DbType="int" CanBeNull="true" />
+      <Column Name="identify_info" Type="System.String" DbType="Varchar(200)" CanBeNull="true" />
+      <Association Name="Employee_Lodging" Member="Lodging" ThisKey="id" OtherKey="emp_id" Type="Lodging" />
+      <Association Name="Employee_OtherFee" Member="OtherFee" ThisKey="id" OtherKey="emp_id" Type="OtherFee" />
+      <Association Name="Employee_TempLodging" Member="TempLodging" ThisKey="id" OtherKey="user_id" Type="TempLodging" />
+      <Association Name="Employee_BlackList" Member="BlackList" ThisKey="id" OtherKey="emp_id" Type="BlackList" />
+      <Association Name="Employee_AutoQuit" Member="AutoQuit" ThisKey="id" OtherKey="emp_id" Type="AutoQuit" />
+      <Association Name="Department_Employee" Member="Department1" ThisKey="department" OtherKey="id" Type="Department" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_fuel_fee" Member="FuelFee">
+    <Type Name="FuelFee">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dorm_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="year_month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cold_water" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="hot_water" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="electricity" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="Varchar(1000)" CanBeNull="true" />
+      <Association Name="Dorm_FuelFee" Member="Dorm" ThisKey="dorm_id" OtherKey="id" Type="Dorm" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_lodging" Member="Lodging">
+    <Type Name="Lodging">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dorm_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="in_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="out_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="real_rent" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="guarantee" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="situation" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="real_manage" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="classify_property" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Lodging_Charge" Member="Charge" ThisKey="id" OtherKey="Loding_id" Type="Charge" />
+      <Association Name="Dorm_Lodging" Member="Dorm" ThisKey="dorm_id" OtherKey="id" Type="Dorm" IsForeignKey="true" />
+      <Association Name="Employee_Lodging" Member="Employee" ThisKey="emp_id" OtherKey="id" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_other_fee" Member="OtherFee">
+    <Type Name="OtherFee">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dorm_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="year_month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="repair_cost" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="fine" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="guesthouse_cost" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="other_cost" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="out_share_water" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="out_share_eletricity" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Dorm_OtherFee" Member="Dorm" ThisKey="dorm_id" OtherKey="id" Type="Dorm" IsForeignKey="true" />
+      <Association Name="Employee_OtherFee" Member="Employee" ThisKey="emp_id" OtherKey="id" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_type" Member="DormType">
+    <Type Name="DormType">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="area" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="rent" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="manage_cost" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="charge_mode" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="max_number" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="DormType_Dorm" Member="Dorm" ThisKey="id" OtherKey="type_id" Type="Dorm" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_temp_lodging" Member="TempLodging">
+    <Type Name="TempLodging">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Employee_TempLodging" Member="Employee" ThisKey="user_id" OtherKey="id" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_verify_order" Member="VerifyOrder">
+    <Type Name="VerifyOrder">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="can_export" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="is_verify" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="year_and_month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_charge" Member="Charge">
+    <Type Name="Charge">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="area_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="department_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="area" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="employee" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="dorm_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rent" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="water" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="electricity" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="management" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="repair" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="fine" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="guesthouse" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="guarantee" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="others" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="classify_property" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="year_month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(10,1)" CanBeNull="true" />
+      <Column Name="account" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="property" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="lodging_id" Member="Loding_id" Type="System.Int32" DbType="int" CanBeNull="true" />
+      <Column Name="dorm_order" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="can_import" Type="System.Boolean" DbType="bit" CanBeNull="true" />
+      <Association Name="Area_Charge" Member="Area1" ThisKey="area_id" OtherKey="id" Type="Area" IsForeignKey="true" />
+      <Association Name="Department_Charge" Member="Department1" ThisKey="department_id" OtherKey="id" Type="Department" IsForeignKey="true" />
+      <Association Name="Lodging_Charge" Member="Lodging" ThisKey="Loding_id" OtherKey="id" Type="Lodging" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_black_list" Member="BlackList">
+    <Type Name="BlackList">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="emp_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="in_date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="in_reason" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="in_operator" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="out_date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="out_reason" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="out_operator" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Employee_BlackList" Member="Employee" ThisKey="emp_id" OtherKey="id" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_auto_quit" Member="AutoQuit">
+    <Type Name="AutoQuit">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dorm_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="in_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="out_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="Dorm_AutoQuit" Member="Dorm" ThisKey="dorm_id" OtherKey="id" Type="Dorm" IsForeignKey="true" />
+      <Association Name="Employee_AutoQuit" Member="Employee" ThisKey="emp_id" OtherKey="id" Type="Employee" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_login_log" Member="LoginLog">
+    <Type Name="LoginLog">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="area" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_dorms_changed" Member="VwDormsChanged">
+    <Type Name="VwDormsChanged">
+      <Column Name="区号" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="房号" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="部门" Storage="_性别" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="姓名" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="账号" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="年月份" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="入住日期" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="退宿日期" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="备注" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_apply" Member="Apply">
+    <Type Name="Apply">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="card_number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="dorm_type" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="apply_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="finish_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="VarChar(60)" CanBeNull="true" />
+      <Column Name="checked" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="handle_time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_authority" Member="Authority">
+    <Type Name="Authority">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="user_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="operate_area_id" Member="operate_area" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="check_area_id" Member="check_area" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="is_admin" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Association Name="User_Authority" Member="User" ThisKey="user_id" OtherKey="id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_dep_map" Member="DepMap">
+    <Type Name="DepMap">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mi_dep" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="ac_dep" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="qty" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_import_log" Member="ImportLog">
+    <Type Name="ImportLog">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="year_month" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="operator" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="op_time" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.VwGetSalaryDepByAccount" Member="VwGetSalaryDepByAccount">
+    <Type Name="VwGetSalaryDepByAccount">
+      <Column Name="zh" Type="System.Decimal" DbType="Decimal(10,0) NOT NULL" CanBeNull="false" />
+      <Column Name="bmmc" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vw_fail_import" Member="VwFailImport">
+    <Type Name="VwFailImport">
+      <Column Name="year_month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="account" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="employee" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(10,1)" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="VarChar(400)" CanBeNull="true" />
+      <Column Name="dorm_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_change_dep_log" Member="ChangeDepLog">
+    <Type Name="ChangeDepLog">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="emp_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="emp_account" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="old_dep" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="new_dep" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="modify_date" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="modify_user" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_event_log" Member="EventLog">
+    <Type Name="EventLog">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="model" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="area" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="dorm" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="emp" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="event" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="operator" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="operate_time" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="is_normal" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.extra_fee" Member="ExtraFee">
+    <Type Name="ExtraFee">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="account" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="fee" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="year_month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dormitory_monthly_fee" Member="MonthlyFee">
+    <Type Name="MonthlyFee">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dorm_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="dorm_number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="emp_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="fee" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.change_dorm_report" Member="VwChangeReport">
+    <Type Name="VwChangeReport">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="area_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="department_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="lodging_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="department" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="area" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="account" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="employee" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="dorm_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rent" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="water" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="electricity" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="management" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="repair" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="fine" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="guesthouse" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="guarantee" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="others" Type="System.Decimal" DbType="Decimal(8,2)" CanBeNull="true" />
+      <Column Name="classify_property" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="comment" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="year_month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="total" Type="System.Decimal" DbType="Decimal(10,1)" CanBeNull="true" />
+      <Column Name="property" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="dorm_order" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="can_import" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.get_fuel_used_of_dorm" Method="get_fuel_used_of_dorm">
+    <Parameter Name="dorm_id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="pre_year_month" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="year_month" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="get_fuel_used_of_dormResult">
+      <Column Name="dormId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cold" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="hot" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="elec" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.check_fuels_used" Method="check_fuels_used">
+    <Parameter Name="area_name" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="dorm_number" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="pre_year_month" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="year_month" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="check_fuels_usedResult">
+      <Column Name="区号" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="房号" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="上月冷水" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="上月热水" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="上月用电" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="本月冷水" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="本月热水" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="本月用电" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="冷水费" Type="System.Decimal" DbType="Decimal(8,1)" CanBeNull="true" />
+      <Column Name="热水费" Type="System.Decimal" DbType="Decimal(8,1)" CanBeNull="true" />
+      <Column Name="电费" Type="System.Decimal" DbType="Decimal(8,1)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.take_duplicate_record" Method="take_duplicate_record">
+    <ElementType Name="take_duplicate_recordResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="宿舍编号" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="宿舍区名称" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="宿舍类型" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="入住性别" Type="System.String" DbType="VarChar(8)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.take_first_fuel_input" Method="take_first_fuel_input">
+    <Parameter Name="areaName" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="year_month" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="take_first_fuel_inputResult">
+      <Column Name="areaName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="dormId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dormNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="elec" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cold" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="hot" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="year_month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.take_input_fuels" Method="take_input_fuels">
+    <Parameter Name="area_name" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="year_month" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="next_year_month" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="take_input_fuelsResult">
+      <Column Name="dormId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dormNumber" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="areaName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="pre_cold" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pre_hot" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pre_elec" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="pre_month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="cur_cold" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cur_hot" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cur_elec" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="cur_month" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.deleteCharge" Method="deleteCharge">
+    <Parameter Name="year_month" Type="System.String" DbType="VarChar(20)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.copyColdWater" Method="copyColdWater">
+    <Parameter Name="lastMonth" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="thisMonth" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.getSalaryDepByAccount" Method="getSalaryDepByAccount">
+    <Parameter Name="account" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="result" Type="System.String" DbType="VarChar(100)" Direction="InOut" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.import_into_salary" Method="import_into_salary">
+    <Parameter Name="year_month" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="operator" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.getDiffDep" Method="getDiffDep">
+    <Parameter Name="out_date" Type="System.DateTime" DbType="SmallDateTime" />
+    <ElementType Name="getDiffDepResult">
+      <Column Name="empId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="empName" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="account_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="depName" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="num" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="salaryDep" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="in_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="new_dep_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.updateHRLivingState" Method="updateHRLivingState">
+    <Parameter Name="account" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="isLiving" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.updateAccountthroughDJB" Method="updateAccountthroughDJB">
+    <Parameter Name="firstDay" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.getBlankAccount" Method="getBlankAccount">
+    <Parameter Name="firstDay" Type="System.String" DbType="VarChar(10)" />
+    <ElementType Name="getBlankAccountResult">
+      <Column Name="name" Type="System.String" DbType="VarChar(40)" CanBeNull="true" />
+      <Column Name="account_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="card_number" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="txm" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.copy2areaWater" Method="copy2areaWater">
+    <Parameter Name="lastMonth" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="thisMonth" Type="System.String" DbType="VarChar(10)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

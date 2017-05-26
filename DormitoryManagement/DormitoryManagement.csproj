@@ -1,0 +1,642 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A08A00E9-C351-486A-8F45-0D313408277B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DormitoryManagement</RootNamespace>
+    <AssemblyName>DormitoryManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>\\192.168.90.100\d%24\dormitory\dormitory\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://192.168.90.100/dorm/</InstallUrl>
+    <ProductName>后勤部宿舍管理系统</ProductName>
+    <PublisherName>信利信息中心</PublisherName>
+    <MinimumRequiredVersion>6.0.0.1</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.html</WebPage>
+    <ApplicationRevision>64</ApplicationRevision>
+    <ApplicationVersion>7.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>true</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>r.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>E27013E2F613001D3DAC1FA3D298E9589D5BF0E3</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>DormitoryManagement_1_TemporaryKey.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MyXls.SL2">
+      <HintPath>bin\MyXls.SL2.dll</HintPath>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdvanceDepDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdvanceDepDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ApplyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ApplyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AreaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AreaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="BaseInfo.cs" />
+    <Compile Include="DepartmentDataSet.cs">
+      <DependentUpon>DepartmentDataSet.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DepartmentDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DepartmentDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DlgLivingIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgLivingIn.Designer.cs">
+      <DependentUpon>DlgLivingIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgMonthlyFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgMonthlyFee.Designer.cs">
+      <DependentUpon>DlgMonthlyFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DlgMovingOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DlgMovingOut.Designer.cs">
+      <DependentUpon>DlgMovingOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormModels.cs" />
+    <Compile Include="DormTypeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DormTypeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormWithID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdvanceDep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAdvanceDep.Designer.cs">
+      <DependentUpon>FrmAdvanceDep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmApplyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmApplyList.Designer.cs">
+      <DependentUpon>FrmApplyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBlackList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBlackList.Designer.cs">
+      <DependentUpon>FrmBlackList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangedDormInfos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangedDormInfos.Designer.cs">
+      <DependentUpon>FrmChangedDormInfos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangeEmpDep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangeEmpDep.Designer.cs">
+      <DependentUpon>FrmChangeEmpDep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangePassword.Designer.cs">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmChangeToSalaryDep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmChangeToSalaryDep.Designer.cs">
+      <DependentUpon>FrmChangeToSalaryDep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheckFuelFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheckFuelFee.Designer.cs">
+      <DependentUpon>FrmCheckFuelFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDataGenerator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDataGenerator.Designer.cs">
+      <DependentUpon>FrmDataGenerator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmployeeInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmployeeInfo.Designer.cs">
+      <DependentUpon>FrmEmployeeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAreaAndDorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAreaAndDorm.Designer.cs">
+      <DependentUpon>FrmAreaAndDorm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaseInfo.Designer.cs">
+      <DependentUpon>FrmBaseInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCheckDormInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCheckDormInfo.Designer.cs">
+      <DependentUpon>FrmCheckDormInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDepartment.Designer.cs">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DormDB.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DormDB.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmpSearchResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmpSearchResult.Designer.cs">
+      <DependentUpon>FrmEmpSearchResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExportByInside.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExportByInside.Designer.cs">
+      <DependentUpon>FrmExportByInside.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExportDatas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExportDatas.Designer.cs">
+      <DependentUpon>FrmExportDatas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmExportEmptyDorm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmExportEmptyDorm.Designer.cs">
+      <DependentUpon>FrmExportEmptyDorm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFirstFuelInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFirstFuelInput.Designer.cs">
+      <DependentUpon>FrmFirstFuelInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFuelInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFuelInput.Designer.cs">
+      <DependentUpon>FrmFuelInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImportData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImportData.Designer.cs">
+      <DependentUpon>FrmImportData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImportFeeLastMonth.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImportFeeLastMonth.Designer.cs">
+      <DependentUpon>FrmImportFeeLastMonth.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImportIntoSalary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImportIntoSalary.Designer.cs">
+      <DependentUpon>FrmImportIntoSalary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLivingPeople.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLivingPeople.Designer.cs">
+      <DependentUpon>FrmLivingPeople.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMain.Designer.cs">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLivingIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLivingIn.Designer.cs">
+      <DependentUpon>FrmLivingIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMonthlyFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMonthlyFee.Designer.cs">
+      <DependentUpon>FrmMonthlyFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMovingOut.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMovingOut.Designer.cs">
+      <DependentUpon>FrmMovingOut.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMovingOutFee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMovingOutFee.Designer.cs">
+      <DependentUpon>FrmMovingOutFee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMultiModifyDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMultiModifyDepartment.Designer.cs">
+      <DependentUpon>FrmMultiModifyDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOperator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOperator.Designer.cs">
+      <DependentUpon>FrmOperator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOtherFeeInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOtherFeeInput.Designer.cs">
+      <DependentUpon>FrmOtherFeeInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSettle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSettle.Designer.cs">
+      <DependentUpon>FrmSettle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginUser.cs" />
+    <Compile Include="MyUtil.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils.cs" />
+    <Compile Include="YearAndMonth.cs" />
+    <EmbeddedResource Include="DlgLivingIn.resx">
+      <DependentUpon>DlgLivingIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgMonthlyFee.resx">
+      <DependentUpon>DlgMonthlyFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgMovingOut.resx">
+      <DependentUpon>DlgMovingOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAdvanceDep.resx">
+      <DependentUpon>FrmAdvanceDep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmApplyList.resx">
+      <DependentUpon>FrmApplyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangedDormInfos.resx">
+      <DependentUpon>FrmChangedDormInfos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangeToSalaryDep.resx">
+      <DependentUpon>FrmChangeToSalaryDep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheckFuelFee.resx">
+      <DependentUpon>FrmCheckFuelFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExportDatas.resx">
+      <DependentUpon>FrmExportDatas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFirstFuelInput.resx">
+      <DependentUpon>FrmFirstFuelInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AdvanceDepDataSet.xsc">
+      <DependentUpon>AdvanceDepDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AdvanceDepDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AdvanceDepDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AdvanceDepDataSet.xss">
+      <DependentUpon>AdvanceDepDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ApplyDataSet.xsc">
+      <DependentUpon>ApplyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ApplyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ApplyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ApplyDataSet.xss">
+      <DependentUpon>ApplyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AreaDataSet.xsc">
+      <DependentUpon>AreaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AreaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AreaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AreaDataSet.xss">
+      <DependentUpon>AreaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="DepartmentDataSet.xsc">
+      <DependentUpon>DepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DepartmentDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DepartmentDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DepartmentDataSet.xss">
+      <DependentUpon>DepartmentDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DormDB.dbml.layout">
+      <DependentUpon>DormDB.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="FrmBlackList.resx">
+      <DependentUpon>FrmBlackList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangeEmpDep.resx">
+      <DependentUpon>FrmChangeEmpDep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmChangePassword.resx">
+      <DependentUpon>FrmChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDataGenerator.resx">
+      <DependentUpon>FrmDataGenerator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmployeeInfo.resx">
+      <DependentUpon>FrmEmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAreaAndDorm.resx">
+      <DependentUpon>FrmAreaAndDorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBaseInfo.resx">
+      <DependentUpon>FrmBaseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCheckDormInfo.resx">
+      <DependentUpon>FrmCheckDormInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDepartment.resx">
+      <DependentUpon>FrmDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmpSearchResult.resx">
+      <DependentUpon>FrmEmpSearchResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExportByInside.resx">
+      <DependentUpon>FrmExportByInside.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmExportEmptyDorm.resx">
+      <DependentUpon>FrmExportEmptyDorm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFuelInput.resx">
+      <DependentUpon>FrmFuelInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImportData.resx">
+      <DependentUpon>FrmImportData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImportFeeLastMonth.resx">
+      <DependentUpon>FrmImportFeeLastMonth.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImportIntoSalary.resx">
+      <DependentUpon>FrmImportIntoSalary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLivingPeople.resx">
+      <DependentUpon>FrmLivingPeople.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMain.resx">
+      <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLivingIn.resx">
+      <DependentUpon>FrmLivingIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMonthlyFee.resx">
+      <DependentUpon>FrmMonthlyFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMovingOut.resx">
+      <DependentUpon>FrmMovingOut.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMovingOutFee.resx">
+      <DependentUpon>FrmMovingOutFee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMultiModifyDepartment.resx">
+      <DependentUpon>FrmMultiModifyDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOperator.resx">
+      <DependentUpon>FrmOperator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOtherFeeInput.resx">
+      <DependentUpon>FrmOtherFeeInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSettle.resx">
+      <DependentUpon>FrmSettle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="DormDB.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DormDB.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DormitoryManagement_1_TemporaryKey.pfx" />
+    <None Include="DormitoryManagement_2_TemporaryKey.pfx" />
+    <None Include="DormitoryManagement_3_TemporaryKey.pfx" />
+    <None Include="DormitoryManagement_TemporaryKey.pfx" />
+    <None Include="DormTypeDataSet.xsc">
+      <DependentUpon>DormTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DormTypeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DormTypeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DormTypeDataSet.xss">
+      <DependentUpon>DormTypeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="r.ico" />
+    <None Include="Resources\background.jpg" />
+    <None Include="Resources\DefaultImage.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="DormitoryManagement.pdb">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>False</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>File</FileType>
+    </PublishFile>
+    <PublishFile Include="office">
+      <Visible>False</Visible>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

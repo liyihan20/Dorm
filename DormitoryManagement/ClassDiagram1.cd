@@ -1,0 +1,499 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DormitoryManagement.AreaDataSet" Collapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAwAAAAJABAAAYAAAAAgCQBgAAAAAAAFABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.BaseInfo" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAEAAAAAAAQAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.DepartmentDataSet" Collapsed="true">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAwAAAAJABAJAQAAAAAgCQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.DormDBDataContext" Collapsed="true">
+    <Position X="4.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AWARUQgUgE4EUAE8CUEEAAkAmXEEAQBYxBkCQQUAAAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.Authority" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIhEAAhAAAAAIAgQAFAAIgBrDICAAAAABABABAQggA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.User" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQmIEwhEAAAAAAAQMFEAAIRjDAEQAQAIAAQAhAQAgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.Area" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQiYAgBEAQAAAAAQAFAAAQBjCAEQCAAAAAQABAQAgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.UnitFee" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAjIAABAAAQAAEAQAFAAAABjCIUQAAEAABAAABYAgI=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.Department" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQiKAwBEAQAQAACYANAAAYBjCAFQCAAAAAQAAhQEgE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.Dorm" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QIxgGQwRGigMQAAAQkFABAABriCAASQAICgQAQFwAkg=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.Employee" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UkQiIcgNGroJgCFAUAfADQExzCCNUQIkACKQySNRHhU=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.FuelFee" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CIQgRQiDEBAEAAQAYAFAgAQBjCCEAEgAAACUABEQAgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.Lodging" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="15.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIE4QpIBgAUBARQSQAFAAIYFjCABFigEAASEABBwCgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.OtherFee" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KITwQBjBEBAgMUCQQIlAIJQhjCCBAgAAJUCUABAYBwA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.DormType" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAiYAABABoIQMAARAHAJAABjCIEQAEgAAAICRAQQgE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.TempLodging" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAhAAAAQAAARAFAAAABjCABAAAAABABCQAQggA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.VerifyOrder" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GAQgABABAAAAAAAAYAFAAACBjCgAIQAJAAEAAAAQAgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.Charge" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>GEUoZS2lGHoJQQSQYAHKqQQRjCIAGSKINOyZUQ1QTwE=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.BlackList" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>oAAgABAJwAACAQACQCFAAMIFjCABkoiUQAAEAABQBgA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DormitoryManagement.VwDormsChanged" Collapsed="true">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iDAAEAAAAQCQCAAAEgAAAQAAAAAgQAAAEIAgBABAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.take_input_fuelsResult" Collapsed="true">
+    <Position X="3" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABACAAAAAAAAAIBEAgASAgADEAEAAAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.get_fuel_used_of_dormResult" Collapsed="true">
+    <Position X="15.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAACAAAAAAAQAAAEAgAEAEAAAAAAAAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.check_fuels_usedResult" Collapsed="true">
+    <Position X="13.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>sBAAEAwAAACQCAAABAgAYAAQAEAAEAAAAAUAAAgAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.take_duplicate_recordResult" Collapsed="true">
+    <Position X="17" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAgAAAAAAAAgAAABAAAAACAAAAEAACAAQAAAAIgA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.DormTypeDataSet" Collapsed="true">
+    <Position X="13.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAwAAAAJABAAASAAAAAgiQBgAAAAAAAEABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmAreaAndDorm" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAACACARAFIAAACAAAACANo4kAAEAHIMAIhCBAY=</HashCode>
+      <FileName>FrmAreaAndDorm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmBaseInfo" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAyAAACCgUCBQBABCFABACABg4gAAAAXEAAYgAAAI=</HashCode>
+      <FileName>FrmBaseInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmBlackList" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MDAABABAACQQABAEAACAAxBCBAg4AQBAAHIAAAAAAgI=</HashCode>
+      <FileName>FrmBlackList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmChangedDormInfos" Collapsed="true">
+    <Position X="8.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAQABAAAAKAQAACAAgIAACAAGAAAAAAAAA=</HashCode>
+      <FileName>FrmChangedDormInfos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmChangeEmpDep" Collapsed="true">
+    <Position X="10" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAACQQIBARAACAAAACAAAYAIAAEGAAAAAAAAA=</HashCode>
+      <FileName>FrmChangeEmpDep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmChangePassword" Collapsed="true">
+    <Position X="11.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACCAQABAAAACRAAACAAAYAAAAAGAAAAAAAAA=</HashCode>
+      <FileName>FrmChangePassword.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrDormInfop" Collapsed="true">
+    <Position X="17" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>UAAAIAAAECAQABAACACABAACgAgIACAAgmAABAAAAAI=</HashCode>
+      <FileName>FrmCheckDormInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmCheckFuelFee" Collapsed="true">
+    <Position X="13.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABBAAAAAACAQABSAAAGAQCACAAgoAACEAGAgAAAABAA=</HashCode>
+      <FileName>FrmCheckFuelFee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmDataGenerator" Collapsed="true">
+    <Position X="15.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CwIAAAAQQCAQAQIAAACAAAACACAFgAIAAKACAAAAAAA=</HashCode>
+      <FileName>FrmDataGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmDepartment" Collapsed="true">
+    <Position X="17" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAXCEAFAAABCAAAACggg4QAAAAGAQACggAAY=</HashCode>
+      <FileName>FrmDepartment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmEmployeeInfo" Collapsed="true">
+    <Position X="3" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>3gAAACAAASQYEBAAACCAEhQSgBgImACQCGIEAAABACA=</HashCode>
+      <FileName>FrmEmployeeInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmEmpSearchResult" Collapsed="true">
+    <Position X="4.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgAAAIACAAAACAAgAAACAQAEAAAAAAAA=</HashCode>
+      <FileName>FrmEmpSearchResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmExcelsExport" Collapsed="true">
+    <Position X="6.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ewIAAAAQACAVARYAEACAACACAOB94AAAgPAOAAAAABA=</HashCode>
+      <FileName>FrmExcelsExport.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmExportByInside" Collapsed="true">
+    <Position X="8.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAACAAQACARARIAEACAACACACQI4AAAAOAAAAAAAAA=</HashCode>
+      <FileName>FrmExportByInside.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmExportCheckingOut" Collapsed="true">
+    <Position X="10" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAgQACAQARIAAACAACACACAwgAAAAKAAAAAAABA=</HashCode>
+      <FileName>FrmExportCheckingOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmExportEmptyDorm" Collapsed="true">
+    <Position X="11.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQACAUARIAAACAACACAEAggAAAgLEAAAAAAAA=</HashCode>
+      <FileName>FrmExportEmptyDorm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmFuelInput" Collapsed="true">
+    <Position X="13.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAIAADAQADAAgACAAEACQAgIAACAIEAAAACCAAA=</HashCode>
+      <FileName>FrmFuelInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmImportData" Collapsed="true">
+    <Position X="15.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAQAAAAQASARIBAAAQGAQAADAMg7AAQAAHAPAAAEAEM=</HashCode>
+      <FileName>FrmImportData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmLivingIn" Collapsed="true">
+    <Position X="17" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/yAAgCUAGGAUCBgGAICQECACAA7YkAIQkGCCAABAADA=</HashCode>
+      <FileName>FrmLivingIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmLogin" Collapsed="true">
+    <Position X="3" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAACAQABAQAACAAAACAAAYAAAAEGAAAAAAIAA=</HashCode>
+      <FileName>FrmLogin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmMain" Collapsed="true">
+    <Position X="4.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQQkQjBCjD4QCIA3AFSIhCQ2BgESqgsQI/AUTGYwBBU=</HashCode>
+      <FileName>FrmMain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmMovingOut" Collapsed="true">
+    <Position X="6.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/yAACoAIAKwQMBACIACAggCCAAAYkBgxAmYEAADABDg=</HashCode>
+      <FileName>FrmMovingOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmOperator" Collapsed="true">
+    <Position X="8.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAACAQABAQAACAAAACAAg4ABAAkHAQAQEAAAI=</HashCode>
+      <FileName>FrmOperator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmOtherFeeInput" Collapsed="true">
+    <Position X="10" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>xCAgCAAQACAwABACIBCAAgQCAAgYAQCwAGSAAAAAAAg=</HashCode>
+      <FileName>FrmOtherFeeInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.FrmSettle" Collapsed="true">
+    <Position X="11.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CgEAhUCACCQRABAAIASAIAACQHgoAQCAgHAIAQAAAgo=</HashCode>
+      <FileName>FrmSettle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.LoginUser" Collapsed="true">
+    <Position X="17" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIEAAAAAAAgAAgAAAAAAAAA=</HashCode>
+      <FileName>LoginUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.Program" Collapsed="true">
+    <Position X="4.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.Utils" Collapsed="true">
+    <Position X="10" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.YearAndMonth" Collapsed="true">
+    <Position X="15.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAIAAAAIAIAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>YearAndMonth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.AreaDataSetTableAdapters.dormitory_areaTableAdapter" Collapsed="true">
+    <Position X="6.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.AreaDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="11.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EQAAACACAABABAEBAAAAMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.DepartmentDataSetTableAdapters.dormitory_departmentTableAdapter" Collapsed="true">
+    <Position X="8.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.DepartmentDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="13.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAAAMAAgAAACwAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.DormTypeDataSetTableAdapters.dormitory_typeTableAdapter" Collapsed="true">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.DormTypeDataSetTableAdapters.TableAdapterManager" Collapsed="true">
+    <Position X="15.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAAAABABAEBAAABMAAgAAACgAAAAAQAAAAABAQ=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.Properties.Resources" Collapsed="true">
+    <Position X="6.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAIIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.Properties.Settings" Collapsed="true">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAABAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.ServiceReference1.HelloWorldRequest" Collapsed="true">
+    <Position X="8.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.ServiceReference1.HelloWorldRequestBody" Collapsed="true">
+    <Position X="10" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.ServiceReference1.HelloWorldResponse" Collapsed="true">
+    <Position X="11.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.ServiceReference1.HelloWorldResponseBody" Collapsed="true">
+    <Position X="13.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.ServiceReference1.helloCRequest" Collapsed="true">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.ServiceReference1.helloCRequestBody" Collapsed="true">
+    <Position X="3" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.ServiceReference1.helloCResponse" Collapsed="true">
+    <Position X="4.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.ServiceReference1.helloCResponseBody" Collapsed="true">
+    <Position X="6.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DormitoryManagement.ServiceReference1.Service1SoapClient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="8.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAEAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="DormitoryManagement.ServiceReference1.Service1Soap" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAEAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DormitoryManagement.ServiceReference1.Service1SoapChannel" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Service References\ServiceReference1\Reference.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="宋体" Size="9" />
+</ClassDiagram>

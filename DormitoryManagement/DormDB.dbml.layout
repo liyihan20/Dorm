@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 14.375, 11.5" name="DormDB">
+  <DataContextMoniker Name="/DormDBDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a03aa58c-073d-404e-8f13-45c7c72416e1" isExpanded="false" absoluteBounds="0.75, 4.875, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/User" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de249585-3405-4f82-addc-84ee07b467f0" absoluteBounds="0.76500000059604645, 5.33500000089407, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="7466be40-15d8-4631-91f5-ae9df9c85f00" isExpanded="false" absoluteBounds="0.75, 0.875, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/DormDBDataContext/Area" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de75fa20-06ab-41b8-8551-7b32e6e0bf39" absoluteBounds="0.76500000059604645, 1.3350000008940697, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0c7f3e93-6120-446d-8a75-a1f74e3ba48f" isExpanded="false" absoluteBounds="0.75, 6.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/UnitFee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="50f80e1a-5235-46d8-9c78-6839288ac25a" absoluteBounds="0.76499999999999968, 7.21, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="88afdfb8-5eb3-44ab-af15-c1539932ff38" isExpanded="false" absoluteBounds="0.75, 3.5, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/DormDBDataContext/Department" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4e10f8bb-b0a1-4134-8b0b-e7d544c3b6f9" absoluteBounds="0.76500000059604645, 3.9600000008940697, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e8e1497c-b9d5-4adb-aeb3-275b11f381bb" isExpanded="false" absoluteBounds="3.5, 1.5, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/DormDBDataContext/Dorm" />
+      <nestedChildShapes>
+        <elementListCompartment Id="df718125-7fda-49e7-861d-52f49d106f74" absoluteBounds="3.5150000005960464, 1.9600000008940697, 1.9700000000000002, 2.1576639811197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b33765f1-63f4-4f11-803f-34601bbb54ea" isExpanded="false" absoluteBounds="3.5, 3.5, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/Employee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="640c8a0e-acca-446c-b4c2-a1ae57c48fca" absoluteBounds="3.5150000005960464, 3.9600000008940697, 1.9700000000000002, 3.685821533203125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5f3bd857-38d8-44c9-b8de-b8fe8891c5d0" isExpanded="false" absoluteBounds="6.25, 9.5, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/FuelFee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="792406b2-89c0-4743-93d2-191d16f37492" absoluteBounds="6.2650000005960464, 9.96000000089407, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b4f3c760-c75d-425a-82fd-d8eacf105572" isExpanded="false" absoluteBounds="9.25, 3.5, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/DormDBDataContext/Lodging" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b5d95c5-98bc-4745-94e7-1cc701a6d32f" absoluteBounds="9.265, 3.9600000000000009, 1.9700000000000002, 2.1576639811197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="32a22bd7-d910-445f-8fd9-1a28b3166bda" isExpanded="false" absoluteBounds="6.25, 1.5, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/OtherFee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cfcdcb55-8060-4d2b-abf4-3015f2b9e76f" absoluteBounds="6.2650000000000006, 1.9600000000000009, 1.9700000000000002, 2.539703369140625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9c3fb3e7-7f83-4baf-ab7a-944dd261ae0a" isExpanded="false" absoluteBounds="0.75, 2.125, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/DormDBDataContext/DormType" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8444d248-7992-4e35-9ebd-94bef1273252" absoluteBounds="0.76500000059604645, 2.5850000008940697, 1.9700000000000002, 1.7756245930989583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75000000159655 : 1.325); (3.49999999840345 : 1.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Area/Area_Dorm" />
+      <nodes>
+        <classShapeMoniker Id="7466be40-15d8-4631-91f5-ae9df9c85f00" />
+        <classShapeMoniker Id="e8e1497c-b9d5-4adb-aeb3-275b11f381bb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75000000159655 : 2.125); (3.49999999840345 : 1.95)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/DormType/DormType_Dorm" />
+      <nodes>
+        <classShapeMoniker Id="9c3fb3e7-7f83-4baf-ab7a-944dd261ae0a" />
+        <classShapeMoniker Id="e8e1497c-b9d5-4adb-aeb3-275b11f381bb" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.725); (3.5 : 3.725)]" manuallyRouted="true" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Department/Department_Employee" />
+      <nodes>
+        <classShapeMoniker Id="88afdfb8-5eb3-44ab-af15-c1539932ff38" />
+        <classShapeMoniker Id="b33765f1-63f4-4f11-803f-34601bbb54ea" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.9278451535103); (5.96875 : 2.3965951535103); (5.96875 : 9.21875000037253); (6.24999999962747 : 9.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Dorm/Dorm_FuelFee" />
+      <nodes>
+        <classShapeMoniker Id="e8e1497c-b9d5-4adb-aeb3-275b11f381bb" />
+        <classShapeMoniker Id="5f3bd857-38d8-44c9-b8de-b8fe8891c5d0" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.93892207656889); (5.88607792305858 : 2.32499999962747); (10.25 : 2.32499999962747); (10.25 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Dorm/Dorm_Lodging" />
+      <nodes>
+        <classShapeMoniker Id="e8e1497c-b9d5-4adb-aeb3-275b11f381bb" />
+        <classShapeMoniker Id="b4f3c760-c75d-425a-82fd-d8eacf105572" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.93892207656889); (5.88607792343111 : 4.325); (9.02975691855204 : 4.325); (9.25034515384615 : 3.95)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Employee/Employee_Lodging" />
+      <nodes>
+        <classShapeMoniker Id="b33765f1-63f4-4f11-803f-34601bbb54ea" />
+        <classShapeMoniker Id="b4f3c760-c75d-425a-82fd-d8eacf105572" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 1.68993930769861); (6.25 : 1.68993930769861)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Dorm/Dorm_OtherFee" />
+      <nodes>
+        <classShapeMoniker Id="e8e1497c-b9d5-4adb-aeb3-275b11f381bb" />
+        <classShapeMoniker Id="32a22bd7-d910-445f-8fd9-1a28b3166bda" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.5221528464897); (5.90982443490112 : 3.11232841158857 : JumpStart); (6.02767556509888 : 2.99447728139081 : JumpEnd); (6.15625 : 2.86590284648969); (6.15625 : 2.04375); (6.25 : 1.95)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Employee/Employee_OtherFee" />
+      <nodes>
+        <classShapeMoniker Id="b33765f1-63f4-4f11-803f-34601bbb54ea" />
+        <classShapeMoniker Id="32a22bd7-d910-445f-8fd9-1a28b3166bda" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="b8f5dacb-e69c-4519-8b95-e97a00104303" isExpanded="false" absoluteBounds="6.25, 6.5, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/TempLodging" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b23d5d0c-0fbe-44a1-9057-a1d8fc6310bc" absoluteBounds="6.2650000005960464, 6.96000000089407, 1.9700000000000002, 0.820526123046875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.50000000037253 : 3.95); (5.90982443490112 : 4.35982443452859 : JumpStart); (6.02767556509888 : 4.47767556472635 : JumpEnd); (6.15625 : 4.60624999962747); (6.15625 : 6.40625000037253); (6.24999999962747 : 6.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Employee/Employee_TempLodging" />
+      <nodes>
+        <classShapeMoniker Id="b33765f1-63f4-4f11-803f-34601bbb54ea" />
+        <classShapeMoniker Id="b8f5dacb-e69c-4519-8b95-e97a00104303" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d01e677f-b951-4d32-9a3a-d75f94411287" isExpanded="false" absoluteBounds="6.75, 4.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/VerifyOrder" />
+      <nestedChildShapes>
+        <elementListCompartment Id="821afecc-ee7a-4838-948c-397254577be8" absoluteBounds="6.765, 5.21, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8dd13693-0e15-434b-908a-740b62948fff" isExpanded="false" absoluteBounds="12, 3.5, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/DormDBDataContext/Charge" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2ef33e71-ad3c-4f32-aab6-d3fb14bb5c1a" absoluteBounds="12.015, 3.96, 1.9700000000000002, 5.0229593912760411" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.29374999981374); (13.90625 : 1.29374999981374); (13.90625 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Area/Area_Charge" />
+      <nodes>
+        <classShapeMoniker Id="7466be40-15d8-4631-91f5-ae9df9c85f00" />
+        <classShapeMoniker Id="8dd13693-0e15-434b-908a-740b62948fff" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.75 : 3.9278451535103); (2.9284048464897 : 4.10625); (11.9293224265734 : 4.10625); (12.0003451538462 : 3.95)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Department/Department_Charge" />
+      <nodes>
+        <classShapeMoniker Id="88afdfb8-5eb3-44ab-af15-c1539932ff38" />
+        <classShapeMoniker Id="8dd13693-0e15-434b-908a-740b62948fff" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5bfac6e7-f80e-462c-b62a-a8a6305c507a" isExpanded="false" absoluteBounds="6.25, 7.75, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/DormDBDataContext/BlackList" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9f0a2084-7989-4b64-9a12-2e41018a4ec7" absoluteBounds="6.2650000005960464, 8.21000000089407, 1.9700000000000002, 1.7756245930989583" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.5 : 3.92992207658379); (6.03125 : 4.46117207658379); (6.03125 : 7.53125000037253); (6.24999999962747 : 7.75)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Employee/Employee_BlackList" />
+      <nodes>
+        <classShapeMoniker Id="b33765f1-63f4-4f11-803f-34601bbb54ea" />
+        <classShapeMoniker Id="5bfac6e7-f80e-462c-b62a-a8a6305c507a" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(11.25 : 3.725); (12 : 3.725)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Lodging/Lodging_Charge" />
+      <nodes>
+        <classShapeMoniker Id="b4f3c760-c75d-425a-82fd-d8eacf105572" />
+        <classShapeMoniker Id="8dd13693-0e15-434b-908a-740b62948fff" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d46168ff-06ec-479e-8a2e-fb8e19e87861" isExpanded="false" absoluteBounds="6.25, 3.5, 2, 0.45000000000000018">
+      <DataClassMoniker Name="/DormDBDataContext/AutoQuit" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0b60a080-d013-4ed4-9049-1bc97bc55ccb" absoluteBounds="6.2650000000000006, 3.96, 1.9700000000000002, 1.393585205078125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.48892307731395 : 1.95); (5.875 : 2.33607692268605); (5.875 : 3.125); (5.90982443490112 : 3.15982443490112 : JumpStart); (6.02767556509888 : 3.27767556509888 : JumpEnd); (6.25 : 3.5)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Dorm/Dorm_AutoQuit" />
+      <nodes>
+        <classShapeMoniker Id="e8e1497c-b9d5-4adb-aeb3-275b11f381bb" />
+        <classShapeMoniker Id="d46168ff-06ec-479e-8a2e-fb8e19e87861" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 3.72603746153674); (5.88541666666667 : 3.72603746153674 : JumpStart); (6.05208333333333 : 3.72603746153674 : JumpEnd); (6.25 : 3.72603746153674)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/Employee/Employee_AutoQuit" />
+      <nodes>
+        <classShapeMoniker Id="b33765f1-63f4-4f11-803f-34601bbb54ea" />
+        <classShapeMoniker Id="d46168ff-06ec-479e-8a2e-fb8e19e87861" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="52c1403f-8010-4c28-ae54-0fa1a6bdd69d" isExpanded="false" absoluteBounds="8.75, 0.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/LoginLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="22cab635-66ff-4288-836d-f81477d0edba" absoluteBounds="8.765, 1.2100000000000009, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1e79a9cb-71c2-45c5-b956-5a6922e51715" isExpanded="false" absoluteBounds="0.75, 8.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/VwDormsChanged" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e47c14cf-e110-45ab-be0e-20aad0d8e7f2" absoluteBounds="0.76500000000000057, 9.21, 1.9700000000000002, 1.966644287109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="00a7bd44-7b19-4d39-b2ff-a2d5abdf451f" isExpanded="false" absoluteBounds="8.75, 6.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/Apply" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6caafa1b-12c5-4c47-8b8c-25ce7c6e2afa" absoluteBounds="8.765, 7.2100000000000009, 1.9700000000000002, 2.1576639811197915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0fa12a01-9775-4079-963f-edb61e3ee09f" isExpanded="false" absoluteBounds="3.5, 4.875, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/Authority" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6656eac1-4354-46e5-9798-0a7a31893b16" absoluteBounds="3.5150000005960464, 5.33500000089407, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 5.1); (3.5 : 5.1)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DormDBDataContext/User/User_Authority" />
+      <nodes>
+        <classShapeMoniker Id="a03aa58c-073d-404e-8f13-45c7c72416e1" />
+        <classShapeMoniker Id="0fa12a01-9775-4079-963f-edb61e3ee09f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="37b88c59-afc2-41e0-b22d-56e357281a32" isExpanded="false" absoluteBounds="8.75, 8.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/DepMap" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f0eaab6a-e05b-4454-a60f-23c0109a6c06" absoluteBounds="8.765, 9.21, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="72925c5c-4db0-4395-a657-a7754abb4a79" isExpanded="false" absoluteBounds="9.75, 4.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/ImportLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="235c7a61-4e28-4e5a-a971-7c630af81a28" absoluteBounds="9.765, 5.2100000000000009, 1.9700000000000002, 1.0115458170572915" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8e1bca78-29e3-40dd-8ed0-b3509a7e7c86" isExpanded="false" absoluteBounds="0.75, 10.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/VwGetSalaryDepByAccount" />
+      <nestedChildShapes>
+        <elementListCompartment Id="200b09eb-d6f8-49a7-b706-d1abbf29f360" absoluteBounds="0.76500000000000057, 11.21, 1.9700000000000002, 0.62950642903645826" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8b0ac377-17ed-4d96-99c9-eea634847d23" isExpanded="false" absoluteBounds="3.75, 10.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/VwFailImport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e7ef95a7-1327-45e8-b646-1f9abf4ea649" absoluteBounds="3.7650000000000006, 11.21, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="749b9063-2956-43a4-879e-777d9cb6d970" isExpanded="false" absoluteBounds="6.75, 10.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/ChangeDepLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="161f45a8-6bc6-4102-9242-1675cd35eefb" absoluteBounds="6.7650000000000006, 11.21, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="977072c4-477c-417e-a5fe-bd3206a9b0e7" isExpanded="false" absoluteBounds="9.75, 10.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/EventLog" />
+      <nestedChildShapes>
+        <elementListCompartment Id="663be3b9-7587-461f-829f-e1aec32eb201" absoluteBounds="9.765, 11.21, 1.9700000000000002, 1.966644287109375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="f8d9b047-e1dc-420a-bc0f-457d65d531f1" isExpanded="false" absoluteBounds="11.75, 0.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/ExtraFee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de4ffcd4-10b7-4333-94d7-e28724e2ce43" absoluteBounds="11.765, 1.21, 1.9700000000000002, 1.2025655110677083" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="193926e4-aed1-44b0-bd3d-125dab7735b8" isExpanded="false" absoluteBounds="11.75, 6.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/MonthlyFee" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4f937cfb-5d64-4025-a6b7-60878e2edb67" absoluteBounds="11.765, 7.21, 1.9700000000000002, 1.5846048990885415" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="836a3937-02fa-4cb0-bee2-fab372321e12" isExpanded="false" absoluteBounds="11.75, 8.75, 2, 0.44999999999999929">
+      <DataClassMoniker Name="/DormDBDataContext/VwChangeReport" />
+      <nestedChildShapes>
+        <elementListCompartment Id="76d30e18-a8b3-4387-8474-3c0fe2b9a4b2" absoluteBounds="11.765, 9.21, 1.9700000000000002, 5.0229593912760411" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
